@@ -1,4 +1,10 @@
-# Third-party notices
+# Copyright and notices
+
+Copyright (c) 2026 Barr Gazetas, for the modifications and additions made in this repository: the port to
+Revit 2025 and later (.NET 8 / .NET 10), the build, install and CI files, the rebranding, and all code written
+after the port. The Barr Gazetas Carbon Tool is for Barr Gazetas internal use.
+
+## Third-party notices
 
 This tool is derived from **HBERT**, an open-source embodied carbon add-in for Revit
 (https://github.com/HawkinsbrownArch/HBERT), copyright (c) 2020 Hawkins\Brown Digital Design,
