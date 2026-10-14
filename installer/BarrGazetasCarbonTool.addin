@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Application">
+    <Name>Barr Gazetas Carbon Tool</Name>
+    <Assembly>BarrGazetasCarbonTool\RevitAddIn.dll</Assembly>
+    <AddInId>949f030f-f3b5-45d9-85d7-cd52857ed176</AddInId>
+    <FullClassName>RevitAddIn.Ribbon.CarbonToolRibbon</FullClassName>
+    <VendorId>BARRGAZETAS</VendorId>
+    <VendorDescription>Barr Gazetas</VendorDescription>
+  </AddIn>
+</RevitAddIns>

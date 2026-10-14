@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <RootNamespace>RevitAddIn</RootNamespace>
+    <AssemblyName>RevitAddIn</AssemblyName>
+    <UseWPF>true</UseWPF>
+    <NoWarn>$(NoWarn);CS1591;NU1701;MSB3277</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CarbonEmissionTool\CarbonEmissionTool.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Ribbon icons and Revit sample template, copied next to the add-in dll. -->
+    <None Include="Resources\*" Link="Resources\%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="..\..\templates\*.rvt" Link="Revit Templates\%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

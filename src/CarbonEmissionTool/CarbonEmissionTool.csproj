@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CarbonEmissionTool</RootNamespace>
+    <AssemblyName>CarbonEmissionTool</AssemblyName>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon>Resources\bgct_icon_small.ico</ApplicationIcon>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <NoWarn>$(NoWarn);CS1591;NU1701;MSB3277</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Extended.Wpf.Toolkit" Version="4.1.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\BGCT_icon.png" />
+    <Resource Include="Resources\bgct_icon_small.ico" />
+    <None Include="Models\Graphics\BG_Material_ColourScheme.json" Link="BG_Material_ColourScheme.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

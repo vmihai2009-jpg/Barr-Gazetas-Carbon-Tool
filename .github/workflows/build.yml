@@ -1,0 +1,23 @@
+name: build
+on:
+  push:
+  pull_request:
+jobs:
+  build:
+    runs-on: windows-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        revit: [2025, 2026, 2027]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: |
+            8.0.x
+            10.0.x
+      - run: dotnet build src/RevitAddIn/RevitAddIn.csproj -c Release -p:RevitVersion=${{ matrix.revit }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: BarrGazetasCarbonTool-Revit${{ matrix.revit }}
+          path: bin/R${{ matrix.revit }}/**/Release/**

@@ -1,0 +1,22 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarbonEmissionTool", "src\CarbonEmissionTool\CarbonEmissionTool.csproj", "{F80585A7-75B1-4255-9FD2-2C175AA3DCBA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RevitAddIn", "src\RevitAddIn\RevitAddIn.csproj", "{6DC0FEE5-B59C-4367-898F-E2785896E337}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F80585A7-75B1-4255-9FD2-2C175AA3DCBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F80585A7-75B1-4255-9FD2-2C175AA3DCBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F80585A7-75B1-4255-9FD2-2C175AA3DCBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F80585A7-75B1-4255-9FD2-2C175AA3DCBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DC0FEE5-B59C-4367-898F-E2785896E337}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DC0FEE5-B59C-4367-898F-E2785896E337}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DC0FEE5-B59C-4367-898F-E2785896E337}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DC0FEE5-B59C-4367-898F-E2785896E337}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
