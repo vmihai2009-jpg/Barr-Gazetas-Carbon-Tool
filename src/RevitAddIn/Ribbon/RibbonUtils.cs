@@ -43,6 +43,26 @@ namespace RevitAddIn.Ribbon
 
         }
 
+        /// <summary> The ribbon tab shared by every Barr Gazetas add-in.</summary>
+        public const string BgTabName = "Barr Gazetas";
+
+        /// <summary>
+        /// Returns the named panel on the shared Barr Gazetas tab, creating the tab and/or panel only if
+        /// another Barr Gazetas add-in has not already done so, so the add-ins can load in any order.
+        /// </summary>
+        public static RibbonPanel GetOrCreateBgPanel(UIControlledApplication application, string panelName)
+        {
+            AddHbRibbonTab(application, BgTabName);
+
+            foreach (RibbonPanel panel in application.GetRibbonPanels(BgTabName))
+            {
+                if (panel.Name == panelName)
+                    return panel;
+            }
+
+            return application.CreateRibbonPanel(BgTabName, panelName);
+        }
+
         /// <summary>
         /// Adds a new ribbon tab to Revits UI with the given tab name.
         /// </summary>

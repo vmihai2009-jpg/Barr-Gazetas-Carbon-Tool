@@ -12,14 +12,10 @@ namespace RevitAddIn.Ribbon
         // Both OnStartup and OnShutdown must be implemented as public method
         public Result OnStartup(UIControlledApplication application)
         {
-            // Create a custom ribbon tab
-            var tabName = "Barr Gazetas";
-            application.CreateRibbonTab(tabName);
-
             ApplicationServices.RevitVersion = int.Parse(application.ControlledApplication.VersionNumber);
 
-            // Add a new ribbon panel
-            RibbonPanel ribbonPanel = application.CreateRibbonPanel(tabName, "Building Analysis");
+            // Shared Barr Gazetas tab: other BG add-ins (e.g. MeshyRFA) may have created it already.
+            RibbonPanel ribbonPanel = RibbonUtils.GetOrCreateBgPanel(application, "Building Analysis");
 
             RibbonUtils.AddButton(ribbonPanel, new CarbonToolButtonData());
 
